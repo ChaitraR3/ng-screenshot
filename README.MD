@@ -1,10 +1,15 @@
 # ng-screenshot
-* * *
+
+--------------------------------------------------------------------------------
+
 AngularJS directive for screenshot
 
 A simple AngularJS directive for screenshot
+
 # Examples:
-* * *
+
+--------------------------------------------------------------------------------
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -22,6 +27,12 @@ A simple AngularJS directive for screenshot
   <h3>Here will not be shot</h3>
   <button id="trigger" type="button" name="button">Screenshot</button>
 
+  <screenshot screenshot-trigger="#trigger2">
+    <h3>Here will be shot</h3>
+    <span>{{email}}</span>
+  </screenshot>
+  <button id="trigger2" type="button" name="button">Screenshot</button>
+
   <script src="../node_modules/jquery/dist/jquery.min.js" charset="utf-8"></script>
   <script src="../node_modules/angular/angular.js" charset="utf-8"></script>
   <script src="../node_modules/html2canvas/dist/html2canvas.js" charset="utf-8"></script>
@@ -31,7 +42,8 @@ A simple AngularJS directive for screenshot
   <script type="text/javascript">
     angular.module('demo', ['ng-screenshot'])
       .controller('demoCtrl', function($scope) {
-        $scope.name = 'Liujialun'
+        $scope.name = 'Liujialun';
+        $scope.email = "jialun.liu@hirain.com";
       })
   </script>
 </body>
@@ -40,9 +52,13 @@ A simple AngularJS directive for screenshot
 ```
 
 # Versions
-* * *
+
+--------------------------------------------------------------------------------
+
 ## Version 0.1.1
+
 Bug fix for multi screenshots exists could not shot correctly.
 
 ## Version 0.1.0
+
 See examples
