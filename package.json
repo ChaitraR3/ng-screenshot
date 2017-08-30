@@ -15,7 +15,10 @@
     "angular",
     "ng"
   ],
-  "author": "jialun.liu",
+  "author": {
+    "name": "jialun.liu",
+    "email": "jialun.liu@hirain.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/liujialun/ng-screenshot/issues"

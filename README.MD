@@ -41,5 +41,8 @@ A simple AngularJS directive for screenshot
 
 # Versions
 * * *
+## Version 0.1.1
+Bug fix for multi screenshots exists could not shot correctly.
+
 ## Version 0.1.0
 See examples

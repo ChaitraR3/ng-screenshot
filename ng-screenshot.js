@@ -31,24 +31,26 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' && module.ex
         template: '<div ng-transclude></div>',
         transclude: true,
         replace: true,
-        link: function(scope, element, attrs) {
-          scope.screenshot = function() {
-            var backgroundcolor = element.css('background-color');
-            html2canvas(element, {
-              background: backgroundcolor
-            }).then(function(canvas) {
-              // document.body.appendChild(canvas);
-              canvas.toBlob(function(blob) {
-                saveAs(blob, "screenshot.png");
-              }, 'image/png');
-            })
-          }
-          if (attrs.screenshotTrigger) {
-            angular.element(attrs.screenshotTrigger).click(function() {
-              scope.screenshot();
-            })
+        compile: function(element, attrs) {
+          return {
+            post: function(scope, element, attrs) {
+              var screenshot = function(ele) {
+                html2canvas(ele).then(function(canvas) {
+                  canvas.toBlob(function(blob) {
+                    saveAs(blob, "screenshot.png");
+                  }, 'image/png');
+                })
+              }
+              if (attrs.screenshotTrigger) {
+                angular.element(attrs.screenshotTrigger).click(function() {
+                  screenshot(element);
+                })
+              }
+
+            }
           }
         }
+        // link: function(scope, element, attrs) {}
       }
     });
 })();
