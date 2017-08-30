@@ -1,0 +1,24 @@
+{
+  "name": "ng-screenshot",
+  "version": "0.1.0",
+  "description": "screenshot for angular 1.x",
+  "main": "ng-screenshot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liujialun/ng-screenshot.git"
+  },
+  "keywords": [
+    "screenshot",
+    "angular",
+    "ng"
+  ],
+  "author": "jialun.liu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/liujialun/ng-screenshot/issues"
+  },
+  "homepage": "https://github.com/liujialun/ng-screenshot#readme"
+}
