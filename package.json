@@ -1,6 +1,6 @@
 {
   "name": "ng-screenshot",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "screenshot for angular 1.x",
   "main": "ng-screenshot.js",
   "scripts": {
